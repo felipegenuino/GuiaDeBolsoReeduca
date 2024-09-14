@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @Environment(\.dismiss) private var dismiss // Para retornar à HomeView
+
+
     let page: PageModel
     
     var body: some View {
@@ -82,5 +86,16 @@ struct ContentView: View {
             .padding()
         }
         .navigationTitle("")
+        .navigationBarBackButtonHidden(true)
+        .navigationBarItems(leading: Button(action: {
+            // Ação personalizada para voltar
+            dismiss() // Volta para a HomeView
+             
+        }) {
+            HStack {
+                Image(systemName: "arrow.left")
+                Text("Voltar para a Lista")
+            }
+        })
     }
 }

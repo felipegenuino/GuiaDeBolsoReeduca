@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct HomeView: View {
+ 
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack(alignment: .leading) {
                 VStack(alignment: .leading) {
                     // Título principal
@@ -44,10 +45,14 @@ struct HomeView: View {
             
             .navigationTitle("")
             .navigationBarHidden(true) // Esconde a barra de navegação na Home
+            
+
            
            
          }
         .navigationBarBackButtonHidden(true) // Esconder o botão de voltar
+       
+
     }
 }
 
