@@ -11,7 +11,9 @@ import SwiftUI
 struct Guia_de_BolsoApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView {
+                SplashView()
+            }
         }
     }
 }
